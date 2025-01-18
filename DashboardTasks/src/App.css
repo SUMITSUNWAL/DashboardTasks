@@ -5,3 +5,16 @@
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+ .scroll::-webkit-scrollbar {
+  height: 12px;
+} 
+
+.scroll::-webkit-scrollbar-thumb {
+  background-color: rgb(181, 175, 175);
+  border-radius: 15px;
+}
+
+.scroll::-webkit-scrollbar-track {
+  background: rgb(90, 86, 86); 
+}

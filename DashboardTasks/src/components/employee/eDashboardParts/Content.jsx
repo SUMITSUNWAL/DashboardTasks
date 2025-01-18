@@ -1,6 +1,6 @@
 const Content = () => {
   return (
-    <div className="flex mx-12 justify-between overflow-auto gap-12 hide-scrollbar">
+    <div className="flex mx-12 justify-between overflow-auto gap-12 scroll">
       <BodyContent />
       <BodyContent />
       <BodyContent />
