@@ -6,9 +6,6 @@ const Login = ({onlineUser}) => {
 
   function submitHandler(e){
     e.preventDefault();
-  }
-
-  function submit(){
     console.log(email);
     console.log(password);
     onlineUser(email,password);
@@ -31,7 +28,7 @@ const Login = ({onlineUser}) => {
         setPassword(e.target.value);
         }}/>
         <button className="font-bold text-[20px] bg-green-700 rounded-3xl p-1 mt-8 hover:bg-green-800" 
-        onClick={submit}>Log in</button>
+        >Log in</button>
       </form>
     </div>
   </div>

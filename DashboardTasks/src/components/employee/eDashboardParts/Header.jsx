@@ -1,8 +1,12 @@
+import { useContext } from "react"
+import { EmployeeName } from "../../../App"
+
 const Header = () => {
+  const userName = useContext(EmployeeName)
   return<div className="flex justify-between mx-12 my-5 items-center">
     <div>
     <p className="text-3xl">Hello</p>
-      <span className="font-bold text-4xl">Sumit</span>
+      <span className="font-bold text-4xl">{userName}</span>
       <span className="text-4xl relative  top-[-4px]">&#x1F44B;</span>
     </div>
     <div>

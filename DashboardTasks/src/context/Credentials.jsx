@@ -7,8 +7,8 @@ const Credentials = ({children}) => {
   const [loading,setLoading] = useState(true);
 
   useEffect(()=>{
-   const {employeeData,adminData} = getLocalStorage();
-   setCredentialData({employeeData,adminData})
+   const {employeeData,adminData,data} = getLocalStorage();
+   setCredentialData({employeeData,adminData,data})
    setLoading(false);
   },[])
 
