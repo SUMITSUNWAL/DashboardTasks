@@ -7,16 +7,14 @@ const Credentials = ({children}) => {
   const [loading,setLoading] = useState(true);
 
   useEffect(()=>{
-   const {employeeData,adminData,data} = getLocalStorage();
-   setCredentialData({employeeData,adminData,data})
+   const {employeeData,adminData,data,task} = getLocalStorage();
+   setCredentialData({employeeData,adminData,data,task})
    setLoading(false);
   },[])
 
   if(loading){
     return <div>Loading...</div>
   }
-  console.log("This is my employee Data");
-  console.log(credentialData.employeeData);
   return (
     <AuthContext.Provider value={credentialData}>
       {children}

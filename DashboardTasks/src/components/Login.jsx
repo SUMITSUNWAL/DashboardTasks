@@ -6,8 +6,7 @@ const Login = ({onlineUser}) => {
 
   function submitHandler(e){
     e.preventDefault();
-    console.log(email);
-    console.log(password);
+
     onlineUser(email,password);
     setEmail("");
     setPassword("");

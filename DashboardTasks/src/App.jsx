@@ -40,7 +40,8 @@ function App() {
       ) : (
         <AdminDashboard />
       )} */}
-     <EmployeeDashboard/>
+     <AdminDashboard />
+     {/* <EmployeeDashboard/> */}
     </div>
   );
 }

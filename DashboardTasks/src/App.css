@@ -18,3 +18,7 @@
 .scroll::-webkit-scrollbar-track {
   background: rgb(90, 86, 86); 
 }
+
+.bg-black {
+  background-color: #2b2a2a;
+}
