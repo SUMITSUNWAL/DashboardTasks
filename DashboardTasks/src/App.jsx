@@ -18,30 +18,37 @@ function App() {
     const employeeFound = data.employeeData.find(
       (e) => email === e.email && password === e.password
     );
-    if (employeeFound) {
-      setUser("employee");
-      const name = data.employeeData.find((e) => {
-        if (e.email === email) {
-          return e;
-        }
-      });
-      setUserName(name.name);
+    
+    if(data.employeeData.find((e) => email === e.email && password === e.password)){
+      setUser("employee")
+      const employeeFound = data.employeeData.find(
+        (e) => email === e.email && password === e.password
+      );
+      setUserName(employeeFound.name);
+    }else if(data.adminData.find((e) => email === e.email && password === e.password)){
+      setUser("admin");
+      const adminFound = data.adminData.find(
+        (e) => email === e.email && password === e.password
+      );
+      setUserName(adminFound.name);
+    }else{
+      alert("Bhaii email and password sahi se barr");
     }
-  }
+    }
 
   return (
     <div>
-      {/* {!user ? (
+      {!user ? (
         <Login onlineUser={onlineUser} />
       ) : user === "employee" ? (
         <EmployeeName.Provider value={userName}>
           <EmployeeDashboard />
         </EmployeeName.Provider>
       ) : (
-        <AdminDashboard />
-      )} */}
-     <AdminDashboard />
-     {/* <EmployeeDashboard/> */}
+        <EmployeeName.Provider value={userName}>
+          <AdminDashboard />
+        </EmployeeName.Provider>
+      )}
     </div>
   );
 }

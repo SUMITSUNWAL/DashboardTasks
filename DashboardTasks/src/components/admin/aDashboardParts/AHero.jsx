@@ -33,6 +33,8 @@ const AHero = () => {
     setDate("");
     setCategary("");
     setDescription("");
+
+    alert("Task Created matar basha chal chalke dikha")
   }
   return (
     <div className="mx-12 bg-gray-800">
